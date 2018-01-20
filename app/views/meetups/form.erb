@@ -1,0 +1,23 @@
+
+
+
+<h1>Name of Meetup</h1>
+
+<%= @error %>
+
+<form action= "/form" method="post" id="meetup-form">
+  <label for= "name">Enter Name:</label>
+  <input type="text" id="name" name="name" value=<%=@name %>>
+
+  <label for= "location">Enter Location:</label>
+  <input type="text" id="location" name="location" value=<%=@location %>>
+
+  <label for= "description">Enter Description:</label>
+  <input type="text" id="description" name="description" value=<%=@description %>>
+
+  <label for= "creator">Enter Creator:</label>
+  <input type="text" id="creator" name="creator" value=<%=@creator%>>
+
+  <input type = "submit" value = "Submit">
+
+</form>

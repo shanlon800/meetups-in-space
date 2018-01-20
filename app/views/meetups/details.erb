@@ -1,0 +1,34 @@
+
+
+<b><%= @sign_in_error %></b>
+
+<b><%= @sign_in_success %></b>
+
+
+
+
+<h2><%= @meeting.name %></h2>
+<ul>
+<li><%= @meeting.description %></li>
+<li><%= @meeting.location %></li>
+<li><%= @meeting.creator %></li>
+</ul>
+
+
+<form method="post" action="/meetups/<%= @id %>">
+<input type="submit" value="Join" style="color: green; font-weight: bold; padding: 10px 10px; background-color: white; border-radius: 10px; margin: 10px 10px;">
+</form>
+
+
+
+<h5>Members:</h5>
+
+<%@users.each do |user| %>
+<ul>
+  <li style="color: green;"><b><%=user.username%></li></b>
+  <li><%=user.avatar_url%></li>
+  <li><%=user.uid%></li>
+  <li><%=user.provider%></li>
+  <li><%=user.email%></li>
+</ul>
+<% end %>
